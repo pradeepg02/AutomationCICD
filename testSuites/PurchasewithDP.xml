@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Suite">
+    <groups>   <!-- To run only certain tests - used for sanity so used groups, run and we include that group name-->
+		 <run>
+			 <include name="Purchase"></include>
+		 </run>
+	  </groups>
+	  
+    <test thread-count="5" name="POClientTest">
+    <classes>
+      <class name="seleniummaventest.pageobjects.POClientTest"/>
+    </classes>
+    </test>
+    
+    <test thread-count="5" name="ErrorValidationTest">
+     <classes>
+      <class name="seleniummaventest.pageobjects.ErrorValidations"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
